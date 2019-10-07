@@ -2,7 +2,7 @@ package com.xiaosheep.ui.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-
+import com.designpattern.composite.CompositePattern;
 import com.designpattern.flyweight.FlyweightPattern;
 import com.designpattern.prototype.DeepClone;
 import com.designpattern.prototype.ShallowClone;
@@ -15,8 +15,7 @@ public class HomeActivity extends Activity {
     DeepClone deepClone = new DeepClone();
     DynamicProxy dynamicProxy = new DynamicProxy();
     FlyweightPattern flyweightPattern = new FlyweightPattern();
-
-
+    CompositePattern compositePattern = new CompositePattern();
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
@@ -27,6 +26,8 @@ public class HomeActivity extends Activity {
         deepClone.deepCloenSerializable();
         dynamicProxy.dynamicProxyTest();
         flyweightPattern.flyweightPatternTest();
+        compositePattern.compositePatternTransparentTest();
+        compositePattern.compositePatternSecurityTest();
     }
 
 }
